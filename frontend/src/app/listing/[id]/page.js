@@ -208,7 +208,7 @@ export default async function ListingPage({ params, searchParams }) {
         <div className="relative">
           <ListingGallery listing={listing} />
           <div className="absolute top-6 left-5 z-20">
-            <Link href="/" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 backdrop-blur shadow-sm border border-slate-200">
+            <Link href="/stays" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 backdrop-blur shadow-sm border border-slate-200">
               <ChevronLeft className="h-5 w-5 text-[#411F0F]" />
             </Link>
           </div>

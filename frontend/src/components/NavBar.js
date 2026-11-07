@@ -211,7 +211,7 @@ function DiscoverySearchForm({ booking, variant = "default" }) {
     };
 
     startTransition(() => {
-      router.push(`/?${new URLSearchParams(buildBookingQuery(nextBooking)).toString()}`);
+      router.push(`/stays?${new URLSearchParams(buildBookingQuery(nextBooking)).toString()}`);
     });
   }
 
@@ -489,7 +489,7 @@ export default function NavBar() {
     return null;
   }
 
-  const isDiscovery = pathname === "/" || pathname === "/search";
+  const isDiscovery = pathname === "/" || pathname === "/stays" || pathname === "/search" || pathname === "/owners";
   const isListing = pathname?.startsWith("/listing/");
   const showStickyReserve = isListing && reserveInfo && !reserveInfo.visible;
 
@@ -510,9 +510,9 @@ export default function NavBar() {
       backAction = null; // uses Link
     }
     const listingId = searchParams.get('listing');
-    let backHref = `/?${new URLSearchParams(buildBookingQuery(booking)).toString()}`;
+    let backHref = `/stays?${new URLSearchParams(buildBookingQuery(booking)).toString()}`;
     if (isCheckout) {
-      backHref = listingId ? `/listing/${listingId}?${new URLSearchParams(buildBookingQuery(booking)).toString()}` : "/";
+      backHref = listingId ? `/listing/${listingId}?${new URLSearchParams(buildBookingQuery(booking)).toString()}` : "/stays";
     }
 
     function handleStickyReserve() {
@@ -540,7 +540,7 @@ export default function NavBar() {
             <div className="hidden sm:block h-5 w-px bg-slate-200" />
 
             {(isTrips && !tripsDetail) ? (
-              <Link href="/" className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-[#411F0F] transition">
+              <Link href="/stays" className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-[#411F0F] transition">
                 <ChevronLeft className="h-4 w-4" />
                 Back to search
               </Link>
@@ -588,6 +588,6 @@ export default function NavBar() {
     );
   }
 
-  // Discovery page: hero layout has its own nav in the left panel
+  // Landing, owners and discovery pages render their own headers
   return null;
 }

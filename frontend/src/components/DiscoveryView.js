@@ -123,7 +123,7 @@ function HeroSearchBar({ booking, openBelow = false, globalBlockedDates = [], pa
 
   function handleSearch(e) {
     e.preventDefault();
-    startTransition(() => router.push(`/?${new URLSearchParams(buildBookingQuery({ checkIn, checkOut, guests: adults + childrenCount })).toString()}`));
+    startTransition(() => router.push(`/stays?${new URLSearchParams(buildBookingQuery({ checkIn, checkOut, guests: adults + childrenCount })).toString()}`));
   }
 
   return (
@@ -262,7 +262,7 @@ function HeroSearchBar({ booking, openBelow = false, globalBlockedDates = [], pa
                   setOpenPanel(null);
                   startTransition(() => {
                     const query = buildBookingQuery({ checkIn, checkOut: v, guests: adults + childrenCount });
-                    router.push(`/?${new URLSearchParams(query).toString()}`);
+                    router.push(`/stays?${new URLSearchParams(query).toString()}`);
                   });
                 }
               }}

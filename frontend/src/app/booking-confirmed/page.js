@@ -97,7 +97,7 @@ export default async function BookingConfirmedPage({ searchParams }) {
             View my trip
           </Link>
           <Link
-            href="/"
+            href="/stays"
             className="flex-1 inline-flex items-center justify-center rounded-[24px] border border-slate-200 bg-white px-6 py-4 text-base font-semibold text-[#411F0F] transition hover:bg-slate-50"
           >
             Explore more stays

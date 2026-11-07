@@ -197,7 +197,7 @@ export default function TripsPageClient() {
                   You have no upcoming trips. Book a stay to get started!
                 </p>
                 <a
-                  href="/"
+                  href="/stays"
                   className="mt-6 inline-flex items-center justify-center gap-2 rounded-[24px] bg-[#411F0F] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[#472312]"
                 >
                   Explore stays →

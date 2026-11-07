@@ -109,7 +109,7 @@ export default function TripDashboardUI({ listing, reservation }) {
         </div>
         <h1 className="text-3xl font-semibold text-[#411F0F]">Reservation Cancelled</h1>
         <p className="mt-3 max-w-sm text-[#411F0F]">Your booking at <strong>{listing.title}</strong> has been cancelled.</p>
-        <Link href="/" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#411F0F] px-8 py-3.5 text-sm font-semibold text-white hover:bg-[#411F0F] transition">
+        <Link href="/stays" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#411F0F] px-8 py-3.5 text-sm font-semibold text-white hover:bg-[#411F0F] transition">
           Explore more stays <ArrowUpRight className="h-4 w-4" />
         </Link>
       </div>

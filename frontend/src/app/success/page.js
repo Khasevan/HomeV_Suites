@@ -13,7 +13,7 @@ export default function SuccessPage() {
           Your reservation is all set. We have successfully sent the itinerary and deposit receipt to your email address.
         </p>
         <Link
-          href="/"
+          href="/stays"
           className="mt-8 inline-flex items-center justify-center rounded-[24px] bg-[#411F0F] px-8 py-4 text-base font-semibold text-white transition hover:bg-[#472312] shadow-lg shadow-[#411F0F]/20"
         >
           Return to exploration
